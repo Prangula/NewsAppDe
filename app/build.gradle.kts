@@ -89,4 +89,8 @@ dependencies {
     implementation(libs.cicerone)
     // Preferences
     implementation (libs.androidx.datastore.preferences)
+    // Navigation
+    implementation(libs.androidx.navigation.compose)
+    // Icons
+    implementation(libs.androidx.material.icons.extended)
 }

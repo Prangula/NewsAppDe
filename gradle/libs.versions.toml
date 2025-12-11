@@ -19,6 +19,7 @@ glide = "4.16.0"
 koinAndroid = "3.4.0"
 kotlinBom = "1.8.0"
 materialVersion = "1.12.0"
+navigationCompose = "2.9.6"
 navVersion = "2.9.0"
 retrofit = "2.9.0"
 roomVersion = "2.7.1"
@@ -30,6 +31,8 @@ androidx-datastore-preferences = { module = "androidx.datastore:datastore-prefer
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navVersion" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navVersion" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
