@@ -8,9 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Scaffold
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
-import com.newsappde.ui.navigation.BottomNavBar
-import com.newsappde.ui.navigation.NavigationGraph
-import com.newsappde.ui.theme.NewsAppDeTheme
+import com.newsappde.presentation.ui.navigation.BottomNavBar
+import com.newsappde.presentation.ui.navigation.NavigationGraph
+import com.newsappde.presentation.ui.theme.NewsAppDeTheme
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")

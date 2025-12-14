@@ -1,12 +1,12 @@
-package com.newsappde.ui.navigation
+package com.newsappde.presentation.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.newsappde.ui.FavoriteScreen
-import com.newsappde.ui.HomeScreen
-import com.newsappde.ui.SearchScreen
+import com.newsappde.presentation.ui.FavoriteScreen
+import com.newsappde.presentation.ui.HomeScreen
+import com.newsappde.presentation.ui.SearchScreen
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
