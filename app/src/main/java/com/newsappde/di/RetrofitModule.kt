@@ -29,7 +29,7 @@ val retrofitModule = module {
 class ApiKeyInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val originalRequest = chain.request()
-        val newUrl = originalRequest.url().newBuilder()
+        val newUrl = originalRequest.url.newBuilder()
             .addQueryParameter("apiKey", API_KEY)
             .build()
         val newRequest = originalRequest.newBuilder()
