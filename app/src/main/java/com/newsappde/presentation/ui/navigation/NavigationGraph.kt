@@ -7,6 +7,8 @@ import androidx.navigation.compose.composable
 import com.newsappde.presentation.ui.FavoriteScreen
 import com.newsappde.presentation.ui.HomeScreen
 import com.newsappde.presentation.ui.SearchScreen
+import com.newsappde.presentation.vm.NewsVm
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
@@ -14,7 +16,10 @@ fun NavigationGraph(navController: NavHostController) {
         navController = navController,
         startDestination = BottomModel.Home.route
     ) {
-        composable(BottomModel.Home.route) { HomeScreen() }
+        composable(BottomModel.Home.route) {
+            val vm: NewsVm = koinViewModel()
+            HomeScreen(state = vm.state)
+        }
         composable(BottomModel.Favorites.route) { FavoriteScreen() }
         composable(BottomModel.Search.route) { SearchScreen() }
     }

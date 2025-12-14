@@ -1,5 +1,7 @@
 [versions]
 agp = "8.6.1"
+coilCompose = "2.4.0"
+koinAndroidxCompose = "3.5.6"
 kotlin = "2.0.0"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -40,6 +42,7 @@ androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomVers
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
 cicerone = { module = "com.github.terrakok:cicerone", version.ref = "cicerone" }
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 dexter = { module = "com.karumi:dexter", version.ref = "dexter" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
@@ -47,6 +50,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinAndroidxCompose" }
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlinBom" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutineVersion" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutineVersion" }

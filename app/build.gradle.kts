@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     // Koin components
     implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
     // Coroutines LifeCycle
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
@@ -88,9 +89,11 @@ dependencies {
     // Cicerone
     implementation(libs.cicerone)
     // Preferences
-    implementation (libs.androidx.datastore.preferences)
+    implementation(libs.androidx.datastore.preferences)
     // Navigation
     implementation(libs.androidx.navigation.compose)
     // Icons
     implementation(libs.androidx.material.icons.extended)
+    // Coil
+    implementation (libs.coil.compose)
 }
