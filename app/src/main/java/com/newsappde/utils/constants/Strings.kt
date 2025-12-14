@@ -8,4 +8,6 @@ object Strings {
     const val API_KEY = "d3ac4814740e4f94ac001a35b8544c3d"
     const val UNKNOWN_ERROR = "Unknown Error"
     const val EMPTY_STRING = ""
+    const val BREAKING_NEWS = "Breaking News"
+    const val UNKNOWN_AUTHOR = "Unknown Author"
 }
