@@ -1,4 +1,4 @@
-package com.newsappde.presentation.vm
+package com.newsappde.presentation.ui.home
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

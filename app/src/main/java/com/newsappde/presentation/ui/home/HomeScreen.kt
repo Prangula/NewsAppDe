@@ -1,4 +1,4 @@
-package com.newsappde.presentation.ui
+package com.newsappde.presentation.ui.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -17,15 +17,20 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.newsappde.domain.model.ArticleDomain
 import com.newsappde.presentation.state.NewsState
 import com.newsappde.presentation.ui.theme.CardBackground
 import com.newsappde.presentation.ui.theme.ScreenBackground
 import com.newsappde.utils.constants.Strings.BREAKING_NEWS
 
 @Composable
-fun HomeScreen(state: NewsState) {
+fun HomeScreen(
+    state: NewsState,
+    onArticleClick: (ArticleDomain) -> Unit,
+    modifier: Modifier = Modifier
+) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(ScreenBackground)
     ) {
@@ -46,7 +51,8 @@ fun HomeScreen(state: NewsState) {
             items(state.newsList?.articles.orEmpty()) { article ->
                 NewsCard(
                     articleDomain = article,
-                    cardBackgroundColor = CardBackground
+                    cardBackgroundColor = CardBackground,
+                    onClick = { onArticleClick(article) }
                 )
             }
         }

@@ -1,6 +1,7 @@
 package com.newsappde
 
 import android.app.Application
+import com.newsappde.di.databaseModule
 import com.newsappde.di.mapperModule
 import com.newsappde.di.repositoryModule
 import com.newsappde.di.retrofitModule
@@ -20,7 +21,8 @@ class NewsApp : Application() {
                     retrofitModule,
                     useCaseModule,
                     vmModule,
-                    mapperModule
+                    mapperModule,
+                    databaseModule
                 )
             )
         }

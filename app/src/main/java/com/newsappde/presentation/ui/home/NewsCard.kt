@@ -1,5 +1,6 @@
-package com.newsappde.presentation.ui
+package com.newsappde.presentation.ui.home
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -30,13 +31,16 @@ import com.newsappde.utils.extensions.NewsImage
 fun NewsCard(
     articleDomain: ArticleDomain,
     cardBackgroundColor: Color,
+    onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     with(articleDomain) {
         Card(
             colors = CardDefaults.cardColors(containerColor = cardBackgroundColor),
             shape = RoundedCornerShape(12.dp),
-            modifier = modifier.padding(vertical = 20.dp, horizontal = 20.dp)
+            modifier = modifier
+                .padding(vertical = 20.dp, horizontal = 20.dp)
+                .clickable { onClick() }
         ) {
             Column(
                 modifier = Modifier
@@ -109,6 +113,7 @@ fun NewsCardPreview() {
             url = "",
             urlToImage = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Liverpool_FC_logo.svg"
         ),
-        cardBackgroundColor = CardBackground
+        cardBackgroundColor = CardBackground,
+        onClick = {}
     )
 }
