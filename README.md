@@ -1,34 +1,36 @@
-NewsAppDe 📰
+# NewsAppDe 📰
 
 A modern Android news app built with Kotlin, Jetpack Compose, MVI, and Clean Architecture.
-It fetches the latest news from NewsAPI and lets you browse, search, and save your favorite articles.
+Stay updated with the latest news and save your favorite articles locally.
 
-Features
+## Features
 
-Fetches breaking news, top headlines, and search results using NewsAPI
+Fetches latest news, top headlines, and search results via NewsAPI
 
-Displays current news and article details in a web view
+View article details in a WebView
 
-Add and remove favorite articles
+Save favorite articles using Room local database
 
-Shows loading, success, and error states
+Supports loading and error states
 
-Clean Architecture with MVI + unidirectional state management
+Clean Architecture with MVI + StateFlow for predictable state management
 
-Built with Jetpack Compose for a modern and responsive UI
+Built with Jetpack Compose for a modern, responsive UI
 
-Fully themable with light and dark mode support
+Fully themed and adaptive for light/dark modes
 
-Tech Stack
+### Tech Stack
 
 Kotlin
 
 Jetpack Compose
 
-Retrofit + Gson for API calls
+Retrofit + Gson for network requests
+
+Room for local storage and caching
 
 Koin for dependency injection
 
-Coroutines + StateFlow for asynchronous state management
+Coroutines + StateFlow for asynchronous operations
 
-Room Database for local favorites
+Navigation Component + SafeArgs for type-safe fragment navigation
