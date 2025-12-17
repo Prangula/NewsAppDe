@@ -1,47 +1,44 @@
 package com.newsappde
 
+import android.annotation.SuppressLint
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.annotation.RequiresApi
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.newsappde.ui.theme.NewsAppDeTheme
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import com.newsappde.presentation.navigation.BottomNavBar
+import com.newsappde.presentation.navigation.NavigationGraph
+import com.newsappde.presentation.ui.theme.NewsAppDeTheme
 
 class MainActivity : ComponentActivity() {
+    @RequiresApi(Build.VERSION_CODES.O)
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val splashScreen = installSplashScreen()
         enableEdgeToEdge()
         setContent {
+            val navController = rememberNavController()
             NewsAppDeTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                splashScreen.setKeepOnScreenCondition { false }
+                Scaffold(
+                    bottomBar = {
+                        val currentRoute =
+                            navController.currentBackStackEntryAsState().value?.destination?.route
+                        if (currentRoute != "web") {
+                            BottomNavBar(navController)
+                        }
+
+                    }
+                ) {
+                    NavigationGraph(navController)
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    NewsAppDeTheme {
-        Greeting("Android")
     }
 }
