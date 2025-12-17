@@ -1,4 +1,4 @@
-package com.newsappde.presentation.ui.navigation
+package com.newsappde.presentation.navigation
 
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
